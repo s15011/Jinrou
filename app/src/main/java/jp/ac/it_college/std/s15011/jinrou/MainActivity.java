@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.run_game_activity).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), TitleActivity.class);
+                Intent intent = new Intent(getApplicationContext(), GameActivity.class);
                 startActivity(intent);
             }
         });
