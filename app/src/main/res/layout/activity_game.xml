@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="jp.ac.it_college.std.s15011.jinrou.GameActivity">
+    tools:context="jp.ac.it_college.std.s15011.jinrou.GameActivity"
+    android:background="@color/white">
 
 </RelativeLayout>
