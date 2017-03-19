@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Jinrou</string>
+    <string name="seconds">180</string>
+    <string name="toggle_button">人狼</string>
+    <string name="toggle_btn_off">人狼OFF</string>
+    <string name="toggle_btn_on">人狼ON</string>
+    <string name="day_or_night">昼</string>
+    <string name="player_job">[役職]</string>
+    <string name="player_name">名前</string>
 </resources>

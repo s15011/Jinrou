@@ -11,4 +11,5 @@
     <color name="aquamarine">#a1d8e6</color>
     <color name="red">#D50000</color>
     <color name="dark_black">#1f3134</color>
+    <color name="micro_text_light">#434343</color>
 </resources>
