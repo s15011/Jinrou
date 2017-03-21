@@ -7,4 +7,17 @@ import android.support.v4.app.Fragment;
  */
 
 public class ChatTab extends Fragment {
+//    @Override
+//    public void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//    }
+//
+//    @Override
+//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+//                             Bundle savedInstanceState) {
+//        View view = inflater.inflate(R.layout.chat_tab, container, false);
+////        Typeface typeface = Typeface.createFromAsset(getContext().getAssets(), "JKG-L_3.ttf");
+////        ((TextView) view.findViewById(R.id.textView)).setTypeface(typeface);
+//        return view;
+//    }
 }

@@ -14,7 +14,6 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Nakachi Samuel Kota on 2017/03/20.
@@ -62,32 +61,32 @@ class MemberListFragment extends ListFragment {
 //    }
 }
 
-//class MyArrayAdapter extends ArrayAdapter<String> {
-//
-//    private LayoutInflater layoutInflater;
-//
-//    public MyArrayAdapter(Context context, int id, ArrayList<String> items) {
-//        super(context, id, items);
-//        this.layoutInflater = (LayoutInflater) context.getSystemService(
-//                Context.LAYOUT_INFLATER_SERVICE
-//        );
-//    }
-//
-//    @NonNull
-//    @Override
-//    public View getView(int position, View convertView, ViewGroup parent) {
-//        if (convertView == null) {
-//            convertView = layoutInflater.inflate(
-//                    R.layout.member_list_row,
-//                    parent,
-//                    false
-//            );
-//        }
-//
-//        View view = super.getView(position, convertView, parent);
-//        TextView textView = (TextView) convertView.findViewById(R.id.textView);
-//        textView.setTypeface(Typeface.createFromAsset(getContext().getAssets(), "JKG-L_3.ttf"));
-//
-//        return convertView;
-//    }
-//}
+class MyArrayAdapter extends ArrayAdapter<String> {
+
+    private LayoutInflater layoutInflater;
+
+    public MyArrayAdapter(Context context, int id, ArrayList<String> items) {
+        super(context, id, items);
+        this.layoutInflater = (LayoutInflater) context.getSystemService(
+                Context.LAYOUT_INFLATER_SERVICE
+        );
+    }
+
+    @NonNull
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        if (convertView == null) {
+            convertView = layoutInflater.inflate(
+                    R.layout.member_list_row,
+                    parent,
+                    false
+            );
+        }
+
+        View view = super.getView(position, convertView, parent);
+        TextView textView = (TextView) convertView.findViewById(R.id.textView);
+        textView.setTypeface(Typeface.createFromAsset(getContext().getAssets(), "JKG-L_3.ttf"));
+
+        return convertView;
+    }
+}
