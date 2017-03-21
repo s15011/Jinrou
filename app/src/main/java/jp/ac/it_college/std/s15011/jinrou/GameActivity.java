@@ -1,9 +1,9 @@
 package jp.ac.it_college.std.s15011.jinrou;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 
-public class GameActivity extends AppCompatActivity {
+public class GameActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
