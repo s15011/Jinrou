@@ -17,16 +17,17 @@
             android:layout_height="71dp"
             android:gravity="right|center_vertical"
             android:paddingRight="5dp"
+            android:textStyle="bold"
             android:textColor="@color/white"
             android:textSize="@dimen/activity_game_top"
             android:background="@drawable/frame_style2"
-            android:id="@+id/textView3"
+            android:id="@+id/player_name"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true" />
 
         <TextView
             android:text="@string/player_job"
-            android:layout_width="75dp"
+            android:layout_width="65dp"
             android:layout_height="71dp"
             android:gravity="center_vertical"
             android:paddingLeft="5dp"
@@ -34,20 +35,20 @@
             android:textSize="@dimen/activity_game_top"
             android:background="@drawable/frame_style"
             android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/textView3"
-            android:id="@+id/textView4" />
+            android:layout_toEndOf="@+id/player_name"
+            android:id="@+id/player_job" />
 
         <TextView
             android:text="@string/day_or_night"
-            android:layout_width="45dp"
+            android:layout_width="55dp"
             android:layout_height="71dp"
             android:gravity="center_horizontal|center_vertical"
             android:textColor="@color/white"
             android:textSize="@dimen/activity_game_top"
             android:background="@drawable/frame_style"
             android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/textView4"
-            android:id="@+id/textView5" />
+            android:layout_toEndOf="@+id/player_job"
+            android:id="@+id/day_or_night" />
     </RelativeLayout>
 
 
@@ -61,7 +62,7 @@
         android:background="@drawable/frame_style"
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/relative_layout1"
-        android:id="@+id/textView6" />
+        android:id="@+id/sec" />
 
 
     <RelativeLayout
@@ -69,13 +70,14 @@
         android:layout_height="71dp"
         android:background="@drawable/frame_style"
         android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/textView6">
+        android:layout_toEndOf="@+id/sec">
 
         <ToggleButton
             android:text="@string/toggle_button"
             android:layout_width="90dp"
             android:layout_height="71dp"
             android:id="@+id/toggleButton"
+            android:textSize="17sp"
             android:checked="false"
             android:textOff="@string/toggle_btn_off"
             android:textOn="@string/toggle_btn_on"
@@ -101,7 +103,7 @@
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tabs"
-        />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

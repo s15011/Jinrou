@@ -1,26 +1,45 @@
 package jp.ac.it_college.std.s15011.jinrou;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 public class GameActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
+
+    TabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout = (TabLayout) findViewById(R.id.tabs);
         ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+
+        TextView player_name = (TextView) findViewById(R.id.player_name);
+        TextView player_job = (TextView) findViewById(R.id.player_job);
+        TextView day_or_night = (TextView) findViewById(R.id.day_or_night);
+        TextView sec = (TextView) findViewById(R.id.sec);
+        ToggleButton tb = (ToggleButton) findViewById(R.id.toggleButton);
+
+        player_name.setText("なまえ");
+        day_or_night.setText("ひる");
+
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "JKG-L_3.ttf");
+//        Typeface typeface = Typeface.createFromAsset(getAssets(), "03SmartFontUI.otf");
+        player_name.setTypeface(typeface);
+        player_job.setTypeface(typeface);
+        day_or_night.setTypeface(typeface);
+        sec.setTypeface(typeface);
+        tb.setTypeface(typeface);
 
         FragmentPagerAdapter adapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
             @Override
@@ -52,6 +71,23 @@ public class GameActivity extends AppCompatActivity implements ViewPager.OnPageC
 
         tabLayout.getTabAt(0).setIcon(R.drawable.tab_icon_selector1).setText("メンバー");
         tabLayout.getTabAt(1).setIcon(R.drawable.tab_icon_selector2).setText("チャット");
+        changeTabsFont();
+    }
+
+    private void changeTabsFont() {
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "JKG-L_3.ttf");
+        ViewGroup vg = (ViewGroup) tabLayout.getChildAt(0);
+        int tabsCount = vg.getChildCount();
+        for (int j = 0; j < tabsCount; j++) {
+            ViewGroup vgTab = (ViewGroup) vg.getChildAt(j);
+            int tabChildsCount = vgTab.getChildCount();
+            for (int i = 0; i < tabChildsCount; i++) {
+                View tabViewChild = vgTab.getChildAt(i);
+                if (tabViewChild instanceof TextView) {
+                    ((TextView) tabViewChild).setTypeface(typeface);
+                }
+            }
+        }
     }
 
 
