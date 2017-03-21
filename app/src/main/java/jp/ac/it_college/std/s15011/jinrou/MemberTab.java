@@ -20,7 +20,6 @@ import java.util.ArrayList;
  */
 
 public class MemberTab extends Fragment {
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,7 +50,6 @@ class MemberListFragment extends ListFragment {
 class MyArrayAdapter extends ArrayAdapter<String> {
 
     private LayoutInflater layoutInflater;
-    private String GameFont =  "JKG-L_3.ttf";
 
     public MyArrayAdapter(Context context, int id, ArrayList<String> items) {
         super(context, id, items);
@@ -71,9 +69,10 @@ class MyArrayAdapter extends ArrayAdapter<String> {
             );
         }
 
-        TextView textView = (TextView) convertView.findViewById(R.id.textView);
-        textView.setTypeface(Typeface.createFromAsset(getContext().getAssets(), GameFont));
+        View view = super.getView(position, convertView, parent);
+        TextView textView = (TextView) view.findViewById(R.id.textView);
+        textView.setTypeface(Typeface.createFromAsset(getContext().getAssets(), "JKG-L_3.ttf"));
 
-        return convertView;
+        return view;
     }
 }
