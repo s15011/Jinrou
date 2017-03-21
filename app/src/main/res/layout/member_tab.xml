@@ -10,12 +10,4 @@
         android:id="@+id/member_list"
         class="jp.ac.it_college.std.s15011.jinrou.MemberListFragment"/>
 
-    <TextView
-        android:text="TextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="50dp"
-        android:id="@+id/member_txt"
-        android:layout_alignParentEnd="true" />
 </FrameLayout>

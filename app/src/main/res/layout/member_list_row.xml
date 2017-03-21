@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/textView"
-    android:textSize="44sp"
+    android:textSize="34sp"
+    android:background="@drawable/frame_style"
     android:paddingLeft="5dp"
     android:textColor="@color/white">
 </TextView>

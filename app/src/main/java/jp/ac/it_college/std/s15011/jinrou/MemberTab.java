@@ -50,7 +50,7 @@ class MemberListFragment extends ListFragment {
 
 //        MyArrayAdapter adapter = new MyArrayAdapter(getContext(), 0, name_list);
 
-//        setListAdapter(adapter);
+        setListAdapter(adapter);
 //        setListAdapter(new ArrayAdapter<String>(getActivity(),
 //                R.layout.member_list_row, name_list));
     }
