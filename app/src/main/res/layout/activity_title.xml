@@ -7,7 +7,7 @@
     tools:context="jp.ac.it_college.std.s15011.jinrou.TitleActivity">
 
     <TextView
-        android:text="タイトル予定地"
+        android:text="タイトル予定"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:id="@+id/textView"
