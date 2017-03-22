@@ -18,10 +18,10 @@ import android.widget.ToggleButton;
 public class GameActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
 
     TabLayout tabLayout;
+    MediaPlayer mp;
     private String GameFont =  "JKG-L_3.ttf";
     private String GameStatus = "night";
     private String IP = "172.16.43.39";
-    MediaPlayer mp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
