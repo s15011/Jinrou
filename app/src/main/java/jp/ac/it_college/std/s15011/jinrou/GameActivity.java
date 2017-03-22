@@ -20,6 +20,7 @@ public class GameActivity extends AppCompatActivity implements ViewPager.OnPageC
     TabLayout tabLayout;
     private String GameFont =  "JKG-L_3.ttf";
     private String GameStatus = "night";
+    private String IP = "172.16.43.39";
     MediaPlayer mp;
 
     @Override
@@ -116,7 +117,7 @@ public class GameActivity extends AppCompatActivity implements ViewPager.OnPageC
         }
     }
 
-    //ゲーム中の戻るキーの無効化
+    // ゲーム中の戻るキーの無効化
     public boolean dispatchKeyEvent(KeyEvent event) {
 //        if (event.getAction() == KeyEvent.ACTION_DOWN) {
 //            switch (event.getKeyCode()) {
