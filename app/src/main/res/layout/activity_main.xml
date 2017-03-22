@@ -24,4 +24,5 @@
         android:text="ゲーム"
         android:layout_below="@+id/run_title_activity"
         android:layout_alignParentStart="true" />
+
 </RelativeLayout>
