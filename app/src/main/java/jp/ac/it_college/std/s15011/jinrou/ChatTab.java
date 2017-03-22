@@ -13,9 +13,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 
 /**
@@ -54,8 +51,7 @@ public class ChatTab extends Fragment {
         final Button button = (Button)getActivity().findViewById(R.id.button2);
         final EditText input_area = (EditText)getActivity().findViewById(R.id.editText);
 
-        Typeface typeface = Typeface.createFromAsset(getContext().getAssets(),
-                String.valueOf(R.string.GameFont));
+        Typeface typeface = Typeface.createFromAsset(getContext().getAssets(), "JKG-L_3.ttf");
 
         ListView listview = (ListView)getActivity().findViewById(R.id.listView);
         adapter = new ArrayAdapter<String>(getActivity(), R.layout.chat_tab_row);
@@ -74,8 +70,7 @@ public class ChatTab extends Fragment {
 
     private void addStringData(){
 
-        Typeface typeface = Typeface.createFromAsset(getContext().getAssets(),
-                String.valueOf(R.string.GameFont));
+        Typeface typeface = Typeface.createFromAsset(getContext().getAssets(), "JKG-L_3.ttf");
 
         EditText edittext = (EditText)getActivity().findViewById(R.id.editText);
         edittext.setTypeface(typeface);

@@ -18,9 +18,10 @@ import android.widget.ToggleButton;
 public class GameActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
 
     TabLayout tabLayout;
+    MediaPlayer mp;
     private String GameFont =  "JKG-L_3.ttf";
     private String GameStatus = "night";
-    MediaPlayer mp;
+    private String IP = "172.16.43.39";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,7 +117,7 @@ public class GameActivity extends AppCompatActivity implements ViewPager.OnPageC
         }
     }
 
-    //ゲーム中の戻るキーの無効化
+    // ゲーム中の戻るキーの無効化
     public boolean dispatchKeyEvent(KeyEvent event) {
 //        if (event.getAction() == KeyEvent.ACTION_DOWN) {
 //            switch (event.getKeyCode()) {
