@@ -37,15 +37,5 @@ public class MainActivity extends Activity {
             }
         });
 
-        findViewById(R.id.socket_activity).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mp = MediaPlayer.create(MainActivity.this, R.raw.b_069);
-                mp.setVolume(0.8f, 0.8f);
-                Intent intent = new Intent(getApplicationContext(), SocketSample.class);
-                mp.start();
-                startActivity(intent);
-            }
-        });
     }
 }
