@@ -24,12 +24,4 @@
         android:text="ゲーム"
         android:layout_below="@+id/run_title_activity"
         android:layout_alignParentStart="true" />
-
-    <Button
-        android:id="@+id/socket_activity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="サーバーへの通信"
-        android:layout_below="@+id/run_game_activity"
-        android:layout_alignParentStart="true" />
 </RelativeLayout>
