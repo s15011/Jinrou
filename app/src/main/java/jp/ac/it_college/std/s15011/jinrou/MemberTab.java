@@ -29,8 +29,6 @@ public class MemberTab extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.member_tab, container, false);
-//        Typeface typeface = Typeface.createFromAsset(getContext().getAssets(), "JKG-L_3.ttf");
-//        ((TextView) view.findViewById(R.id.textView)).setTypeface(typeface);
         return view;
     }
 }
@@ -43,22 +41,10 @@ class MemberListFragment extends ListFragment {
         ArrayList<String> name_list = new ArrayList<>();
         for (int i = 0; i <= 30; i++) name_list.add("member"+i);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                getActivity(),
-                R.layout.member_list_row,
-                name_list);
-
-//        MyArrayAdapter adapter = new MyArrayAdapter(getContext(), 0, name_list);
+        MyArrayAdapter adapter = new MyArrayAdapter(getContext(), 0, name_list);
 
         setListAdapter(adapter);
-//        setListAdapter(new ArrayAdapter<String>(getActivity(),
-//                R.layout.member_list_row, name_list));
     }
-
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-//        return inflater.inflate(R.layout.member_list_row, container, false);
-//    }
 }
 
 class MyArrayAdapter extends ArrayAdapter<String> {
@@ -84,9 +70,9 @@ class MyArrayAdapter extends ArrayAdapter<String> {
         }
 
         View view = super.getView(position, convertView, parent);
-        TextView textView = (TextView) convertView.findViewById(R.id.textView);
+        TextView textView = (TextView) view.findViewById(R.id.textView);
         textView.setTypeface(Typeface.createFromAsset(getContext().getAssets(), "JKG-L_3.ttf"));
 
-        return convertView;
+        return view;
     }
 }
