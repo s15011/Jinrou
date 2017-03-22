@@ -1,6 +1,7 @@
 package jp.ac.it_college.std.s15011.jinrou;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -12,6 +13,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 
 /**
@@ -48,7 +52,10 @@ public class ChatTab extends Fragment {
         super.onStart();
 
         final Button button = (Button)getActivity().findViewById(R.id.button2);
-        final EditText comment = (EditText)getActivity().findViewById(R.id.editText);
+        final EditText input_area = (EditText)getActivity().findViewById(R.id.editText);
+
+        Typeface typeface = Typeface.createFromAsset(getContext().getAssets(),
+                String.valueOf(R.string.GameFont));
 
         ListView listview = (ListView)getActivity().findViewById(R.id.listView);
         adapter = new ArrayAdapter<String>(getActivity(), R.layout.chat_tab_row);
@@ -56,7 +63,7 @@ public class ChatTab extends Fragment {
         button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                if (!comment.getText().toString().equals("")) {
+                if (!input_area.getText().toString().equals("")) {
                     addStringData();
                 }
             }
@@ -66,7 +73,12 @@ public class ChatTab extends Fragment {
     }
 
     private void addStringData(){
+
+        Typeface typeface = Typeface.createFromAsset(getContext().getAssets(),
+                String.valueOf(R.string.GameFont));
+
         EditText edittext = (EditText)getActivity().findViewById(R.id.editText);
+        edittext.setTypeface(typeface);
         adapter.add("なまえ >> " + edittext.getText().toString());
         edittext.getEditableText().clear();
     }
