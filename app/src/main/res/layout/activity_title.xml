@@ -11,4 +11,47 @@
     tools:context="jp.ac.it_college.std.s15011.jinrou.TitleActivity"
     android:background="@color/white">
 
+    <TextView
+        android:text="タイトル予定"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView"
+        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textSize="30sp" />
+
+    <TextView
+        android:text="サーバー"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView2"
+        android:layout_height="50dp"
+        android:layout_width="150dp"
+        android:gravity="center"
+        android:textSize="24sp" />
+
+    <EditText
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/server_name"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="9dp"
+        android:hint="Server_Address" />
+
+    <Button
+        android:text="Connect"
+        android:layout_below="@+id/server_name"
+        android:layout_alignParentStart="false"
+        android:id="@+id/Connect"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="130dp"
+        android:layout_marginRight="130dp" />
+
 </RelativeLayout>
