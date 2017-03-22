@@ -1,6 +1,7 @@
 package jp.ac.it_college.std.s15011.jinrou;
 
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.design.widget.TabLayout;
@@ -8,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -18,6 +20,7 @@ public class GameActivity extends AppCompatActivity implements ViewPager.OnPageC
     TabLayout tabLayout;
     private String GameFont =  "JKG-L_3.ttf";
     private String GameStatus = "night";
+    MediaPlayer mp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +79,9 @@ public class GameActivity extends AppCompatActivity implements ViewPager.OnPageC
         changeTabsFont();
         CountDown countDown = new CountDown(182000, 1000);
         countDown.start();
+        mp = MediaPlayer.create(GameActivity.this, R.raw.n24);
+        mp.setVolume(0.8f, 0.8f);
+        mp.start();
     }
 
     @Override
@@ -108,6 +114,18 @@ public class GameActivity extends AppCompatActivity implements ViewPager.OnPageC
                 }
             }
         }
+    }
+
+    //ゲーム中の戻るキーの無効化
+    public boolean dispatchKeyEvent(KeyEvent event) {
+//        if (event.getAction() == KeyEvent.ACTION_DOWN) {
+//            switch (event.getKeyCode()) {
+//                case KeyEvent.KEYCODE_BACK:
+//                    Toast.makeText(GameActivity.this, "ゲーム中に戻ることはできません", Toast.LENGTH_SHORT).show();
+//                    return true;
+//            }
+//        }
+        return super.dispatchKeyEvent(event);
     }
 
     // 残り秒数のカウントダウン
